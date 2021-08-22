@@ -1,12 +1,25 @@
+exports.min = function min(array) {
+  if(!array || !array.length){
+    return 0;
+  } else {
+    return Math.min.apply( Math, array )
+  }
+};
 
-exports.min = function min (array) {
-  return 0;
-}
+exports.max = function max(array) {
+  if(!array || !array.length){
+    return 0;
+  } else {
+    return Math.max.apply( Math, array )
+  }
+};
 
-exports.max = function max (array) {
-  return 0;
-}
-
-exports.avg = function avg (array) {
-  return 0;
-}
+exports.avg = function avg(array) {
+  if(!array || !array.length){
+    return 0;
+  } else {
+    let sum =  array.reduce((accumulator, currentValue) => accumulator + currentValue)
+    return (sum / 2) / 10;
+  }
+  
+};
